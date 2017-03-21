@@ -2,14 +2,14 @@
   <head>
     <title>01 - color rainbow</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/vvvv.css" />
-    <script src="/js/jquery-1.8.2.min.js"></script>
-    <script src="/js/vvvv.js"></script>
+    <link rel="stylesheet" href="../../vvvv.css" />
+    <script src="../../js/jquery-1.8.2.min.js"></script>
+    <script src="../../js/vvvv.js"></script>
     <script type="text/javascript">
       var patch;
       var mainloop;
       $(document).ready(function() {
-        VVVV.init('/js/vvvv/', 'full', function() {
+        VVVV.init('../../js/vvvv/', 'full', function() {
           patch = new VVVV.Core.Patch('example01.v4p', function() {
             mainloop = new VVVV.Core.MainLoop(this);
           });
