@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>02 - 3d testing</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../vvvv.css" />
+    <script src="../../js/jquery-1.8.2.min.js"></script>
+    <script src="../../js/vvvv.js"></script>
+    <script type="text/javascript">
+      var patch;
+      var mainloop;
+      $(document).ready(function() {
+        VVVV.init('../../js/vvvv/', 'full', function() {
+          patch = new VVVV.Core.Patch('e02.v4p', function() {
+            mainloop = new VVVV.Core.MainLoop(this);
+          });
+          $('.start-button').click(function() {
+            mainloop.start();
+            $(this).attr('disabled', true);
+            $('.stop-button').attr('disabled', null);
+          });
+
+          $('.stop-button').click(function() {
+            mainloop.stop();
+            $(this).attr('disabled', true);
+            $('.start-button').attr('disabled', null);
+          });
+
+          $('.show-button').click(function() {
+            var viewer = new VVVV.VVVViewer(patch, '.viewer-pane');
+            $(this).attr('disabled', true);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" class="start-button" value="Resume" disabled="disabled" />
+    <input type="button" class="stop-button" value="Pause"/>
+    <input type="button" class="show-button" value="Show patch" />
+    <br/>
+    <div class="viewer-pane">
+    </div>
+  </body>
+</html>

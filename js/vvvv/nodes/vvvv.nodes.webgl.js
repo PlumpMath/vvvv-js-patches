@@ -10,6 +10,7 @@ VVVV.ShaderCodeResources = {
   "%VVVV%/effects/PhongDirectional.vvvvjs.fx": undefined,
   "%VVVV%/effects/GouraudDirectional.vvvvjs.fx": undefined,
   "%VVVV%/effects/Constant.vvvvjs.fx": undefined,
+  "%VVVV%/effects/Normals.vvvvjs.fx": undefined,
 };
 
 /**
